@@ -1,0 +1,111 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        height: 100%;
+        font-family: 'Harry Potter', sans-serif;
+    }
+
+    .app {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        text-align: center;
+        padding: 1.25rem 1.5rem;
+
+    }
+
+    .header h1 {
+        margin: 0.5rem 0 1rem;
+    }
+
+    .search-container {
+        display: grid;
+        grid-template-columns: 9fr 3fr;
+        gap: 1em;
+        margin-bottom: 1.2em;
+    }
+
+    .search-container input {
+        font-size: 1.05em;
+        padding: 0.6em 0.3em;
+        border: none;
+        outline: none;
+        color: #1f194c;
+        border-bottom: 1.5px solid #1f194c;
+    }
+
+    .search-container input:focus {
+        border-color: #5372f0;
+    }
+
+    .search-container button {
+        font-size: 1.15em;
+        border-radius: 2em;
+        background-color: rgba(245, 53, 32, 0.895);
+        border: none;
+        color: #fff;
+        padding: 0.6em 0;
+    }
+
+    .slideshow {
+        background-image: linear-gradient(#454545, #515050);
+        background-color: #1e136d;
+        padding: 40px;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 5px;
+    }
+
+    #characterList {
+        padding-inline-start: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 20px;
+
+    }
+
+    .character {
+        background-color: #e2e6f3;
+        list-style-type: none;
+        border-radius: 3px;
+        padding: 10px 20px;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+            'name image'
+            'actors image';
+        text-align: left;
+
+    }
+
+    .character>h2 {
+        grid-area: name;
+        margin-bottom: 0px;
+    }
+
+    .character img {
+        max-height: 100px;
+        grid-area: image;
+    }
+
+
+
+
+
+    @media screen and (max-width:600px) {
+        .search-container {
+            grid-template-columns: 1fr;
+        }
+        .slideshow{
+            width: 100%;
+            padding:20px;
+        }
+    }
