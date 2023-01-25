@@ -1,5 +1,5 @@
 # HarryPotter-api
-### Responsive Search bar with public Api
+### Responsive Search bar with public API
 #### Technology
 * Html 
 * Css
